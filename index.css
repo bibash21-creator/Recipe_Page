@@ -1,0 +1,258 @@
+@import url('https://fonts.googleapis.com/css2?family=Young+Serif&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+
+
+:root{
+    --body-bg-color: lch(97.2% 35.35 104.31);
+    --page-color: hsl(0, 0%, 100%);
+    --line-color: lch(62.42% 5.1 19.81 / 0.781);
+    --heading-color: hsl(14, 45%, 36%);
+    --time-bg-color:hsla(332, 60%, 70%,0.3);
+    --time-head-color: hsla(332, 70%, 34%, 1.00);
+    
+}
+
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+
+main{
+    width: min(100%);
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+    grid-template-rows: repeat(1,5fr);
+    grid-template-areas: "image"
+    "head"
+    "time"
+    "ingre"
+    "inst"
+    "nut"
+}
+
+.img{
+    grid-area: image;
+}
+
+.headings{
+    padding: clamp(0.2em, 1em, 1.5em);
+    grid-area: head;
+}
+
+.img img{
+    max-width: min(100%);
+}
+
+.headings header{
+    font-family: 'Young Serif', sans-serif;
+    font-size: min(2rem);
+}
+
+.headings p{
+    margin-block-start: clamp(0.5em, 0.7em, 1em);
+    font-family: 'Outfit',sans-serif;
+    font-size: min(0.9rem);
+}
+
+.time{
+    background: var(--time-bg-color);
+    border: 0.1em solid var(--time-bg-color);
+    border-radius: min(0.5em);
+}
+
+.time h5{
+    color: var(--time-head-color)
+}
+
+
+
+.time, .info{
+    grid-area: time;
+    background: var();
+    padding: clamp(0.2em, 1em, 1.9em);
+    font-family: 'Outfit', sans-serif;
+}
+
+
+.info li span{
+    font-weight: bold;
+}
+
+.ingre{
+    padding: clamp(0.2em, 1em, 1.5em);
+    font-family: 'Outfit', sans-serif;    
+}
+
+h2{
+    color: var(--heading-color)
+}
+
+.ingre h2{
+    font-family: 'Young Serif',sans-serif;
+}
+
+
+
+
+
+
+
+
+.inst{
+    grid-area: inst;
+    font-family: 'Outfit', sans-serif;
+    padding: clamp(0.2em, 1em, 1.5em)
+}
+
+
+.inst h2{
+    font-family: 'Young Serif',sans-serif;
+}
+
+.nutrition{
+    grid-area: nut;
+    padding: clamp(0.2em, 1em, 1.5em);
+    font-family: 'Outfit', sans-serif;
+}
+
+.nutrition h2{
+    font-family: 'Young Serif', sans-serif;
+}
+
+.nutrition p{
+    margin-block-start: clamp(0.3em, 0.5em, 0.7em);
+}
+
+.data{
+    padding-inline-start: clamp(0.3em, 1em, 1.75em);
+    
+}
+
+.left{
+    display: flex;
+    gap: min(8rem);
+}
+
+table { 
+
+  width: min(100%);
+  border-collapse: collapse;
+  margin-block-start: clamp(0em, 0.5em, 0.7em);
+}
+
+td {
+  padding: 0.3em 0.5em;
+  border-bottom: 0.1em solid #ddd;
+}
+
+
+
+
+
+
+
+@media (min-width: 40em){
+    body{
+        display: flex;
+        justify-content: center;
+        align-items:center;
+        background: var(--body-bg-color)
+    }
+
+    main{
+        margin-block: min(1rem);
+
+        max-width: 30vw;
+        display: flex;
+        flex-direction: column;
+        background: var(--page-color);
+        border: 0.1em solid  var(--page-color);
+        border-radius: min(1em);
+        padding: clamp(0.3em,1em, 1.5em);
+    }
+
+    .img img{
+        max-width: min(100%);
+    }
+
+    .headings header{
+        text-align: left;
+        font-size: min(1.25rem);
+    }
+
+    .headings  p{
+        text-align: left;
+        font-size: min(0.55rem);
+    }
+
+
+    .time>.info{
+        font-size: min(0.75rem);
+    }
+
+    .ingre h2{
+        font-size: min(1.15rem);
+        font-weight: 300;
+    }
+
+    .ingre>.info{
+        line-height: min(1.7em);
+
+        font-size: min(0.65rem);
+    }
+
+    .inst h2{
+        font-size: min(1.15rem);
+        font-weight: 300;
+    }
+
+    .inst>.info{
+           gap: min(1.2em);
+    }
+
+
+.inst ol {
+    margin-block-start: clamp(0.1em, 0.5em, 0.7em);
+  padding-inline-start: clamp(0.5em, 1em, 1.3em);
+  line-height: 1.6; 
+  list-style-type: decimal;
+  list-style-position: outside;
+}
+
+.inst li {
+  margin-bottom: clamp(0em,0.1em, 0.3em);
+}
+
+strong {
+  color: #000;
+}
+
+
+    .inst>.info span{
+        font-weight: bold;
+    }
+
+    .nutrition h2{
+        font-size: min(1.15rem);
+    }
+
+    .nutrition p{
+        font-size: min(0.75rem);
+    }
+
+    .nutrition table{
+        font-size: min(0.75rem);
+    }
+    
+
+   
+
+   
+
+
+
+    
+}
